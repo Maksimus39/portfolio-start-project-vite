@@ -30,6 +30,8 @@ const Photo = styled.img`
     width: 570px;
     height: 570px;
     object-fit: cover;
+    opacity: 90%;
+    transform: rotate(7.52deg); /* Поворот на -7.52 градуса */
 `
 
 const MainTitle = styled.h1`
