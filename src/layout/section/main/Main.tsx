@@ -1,19 +1,29 @@
 import ImagePhoto from "./../../../assets/images/myPhoto.webp"
 import styled from "styled-components";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 
 export const Main = () => {
     return (
-        <div>
-            <div>
-                <span>HELLO</span>
-                <h2>I`M Maxim</h2>
-                <h1>A Web Developer</h1>
-            </div>
+        <StyledMain>
+            <FlexWrapper align={"center"} justify={"space-around"}>
+                <div>
+                    <h2>HELLO</h2>
+                    <Name>I`M Maxim</Name>
+                    <MainTitle>A Web Developer</MainTitle>
+                </div>
 
-            <Photo src={ImagePhoto} alt="Photo"/>
-        </div>
+
+                <Photo src={ImagePhoto} alt="Photo"/>
+            </FlexWrapper>
+        </StyledMain>
     );
 };
+
+
+const StyledMain = styled.div`
+    min-height: 100vh;
+    background-color: lavender;
+`
 
 
 const Photo = styled.img`
@@ -21,3 +31,9 @@ const Photo = styled.img`
     height: 570px;
     object-fit: cover;
 `
+
+const MainTitle = styled.h1`
+
+`
+
+const Name = styled.h2``
