@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Work} from "./work/Work.tsx";
-import MentalHealth from "./../../assets/images/photo-1.webp"
-import FashionShow from "./../../assets/images/photo-2.webp"
-import Barbeque from "./../../assets/images/photo-3.webp"
+import MentalHealth from "../../../assets/images/photo-1.webp"
+import FashionShow from "../../../assets/images/photo-2.webp"
+import Barbeque from "../../../assets/images/photo-3.webp"
 
 export const Works = () => {
     return (
