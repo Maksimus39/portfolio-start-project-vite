@@ -13,7 +13,10 @@ export const Main = () => {
                 </div>
 
 
-                <Photo src={ImagePhoto} alt="Photo"/>
+                <PhotoWrapper>
+                    <BackgroundPhoto></BackgroundPhoto>
+                    <Photo src={ImagePhoto} alt="Photo" />
+                </PhotoWrapper>
             </FlexWrapper>
         </StyledMain>
     );
@@ -24,7 +27,11 @@ const StyledMain = styled.div`
     min-height: 100vh;
     background-color: lavender;
 `
-
+const PhotoWrapper = styled.div`
+    position: relative;
+    width: 570px;
+    height: 570px;
+`;
 
 const Photo = styled.img`
     width: 570px;
@@ -32,7 +39,25 @@ const Photo = styled.img`
     object-fit: cover;
     opacity: 90%;
     transform: rotate(7.52deg); /* Поворот на -7.52 градуса */
+    top: 0;
+    left: 0;
+    z-index: 1;
 `
+
+const BackgroundPhoto = styled.div`
+    width: 570px;
+    height: 570px;
+    background: rgba(231, 231, 231, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotate(-7.52deg); /* Поворот на -7.52 градуса */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+`;
 
 const MainTitle = styled.h1`
 
