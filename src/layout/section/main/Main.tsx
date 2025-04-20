@@ -15,7 +15,7 @@ export const Main = () => {
 
                 <PhotoWrapper>
                     <BackgroundPhoto></BackgroundPhoto>
-                    <Photo src={ImagePhoto} alt="Photo" />
+                    <Photo src={ImagePhoto} alt="Photo"/>
                 </PhotoWrapper>
             </FlexWrapper>
         </StyledMain>
@@ -28,6 +28,7 @@ const StyledMain = styled.div`
     background-color: lavender;
 `
 const PhotoWrapper = styled.div`
+    margin-top: 210px;
     position: relative;
     width: 570px;
     height: 570px;
@@ -60,7 +61,8 @@ const BackgroundPhoto = styled.div`
 `;
 
 const MainTitle = styled.h1`
-
+    width: 656px;
+    height: 194px;
 `
 
 const Name = styled.h2``
