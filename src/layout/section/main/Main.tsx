@@ -25,7 +25,8 @@ export const Main = () => {
 
 const StyledMain = styled.div`
     min-height: 100vh;
-    background-color: lavender;
+    background: rgba(255, 255, 255, 1);
+
 `
 const PhotoWrapper = styled.div`
     margin-top: 210px;
