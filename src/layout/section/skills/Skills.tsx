@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Skill} from "./skill/Skill.tsx";
+import {Theme} from "../../../styles/Theme.ts";
 
 export const Skills = () => {
     return (
@@ -40,6 +41,6 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    background-color: cadetblue;
+    background-color: ${Theme.colors.secondaryBG};
     min-height: 100vh;
 `

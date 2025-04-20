@@ -4,6 +4,7 @@ import {Work} from "./work/Work.tsx";
 import MentalHealth from "../../../assets/images/photo-1.webp"
 import FashionShow from "../../../assets/images/photo-2.webp"
 import Barbeque from "../../../assets/images/photo-3.webp"
+import {Theme} from "../../../styles/Theme.ts";
 
 export const Works = () => {
     return (
@@ -35,10 +36,7 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
     min-height: 100vh;
-    background-color: dimgrey;
-    
-
-
+    background-color: ${Theme.colors.primaryBg};
 `
 
 const SectionTitle = styled.h2`

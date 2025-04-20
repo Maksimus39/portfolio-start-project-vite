@@ -1,10 +1,13 @@
 import {Icon} from "../icon/Icon.tsx";
+import styled from "styled-components";
 
 export const Logo = () => {
     return (
-        <a href="">
+        <StyledLink href="">
             <Icon iconId={"react"}/>
-        </a>
+        </StyledLink>
     );
 };
 
+const StyledLink = styled.a`
+`

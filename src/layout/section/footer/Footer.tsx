@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Theme} from "../../../styles/Theme.ts";
 
 export const Footer = () => {
     return (
@@ -33,7 +34,7 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     min-height: 40vh;
-    background-color: rgba(240, 248, 255, 0.43);
+    background-color: ${Theme.colors.primaryBg};
     width: 100%;
     display: flex;
     flex-direction: column;

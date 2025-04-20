@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {Logo} from "../../../components/logo/Logo.tsx";
 import {Button} from "../../../components/Button.tsx";
+import {Theme} from "../../../styles/Theme.ts";
 
 export const Contact = () => {
     return (
@@ -35,7 +36,7 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
     min-height: 50vh;
-    background-color: rgb(137, 202, 24);
+    background-color: ${Theme.colors.primaryBg};
     display: flex;
     justify-content: center;
 `

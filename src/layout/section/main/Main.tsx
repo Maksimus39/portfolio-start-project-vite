@@ -1,6 +1,7 @@
 import ImagePhoto from "./../../../assets/images/myPhoto.webp"
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {Theme} from "../../../styles/Theme.ts";
 
 export const Main = () => {
     return (
@@ -8,7 +9,7 @@ export const Main = () => {
             <FlexWrapper align={"center"} justify={"space-around"}>
                 <div>
                     <h2>HELLO</h2>
-                    <Name>I`M Maxim</Name>
+                    <Name>I`m Maxim Minakov</Name>
                     <MainTitle>A Web Developer</MainTitle>
                 </div>
 
@@ -25,7 +26,7 @@ export const Main = () => {
 
 const StyledMain = styled.div`
     min-height: 100vh;
-    background: rgba(255, 255, 255, 1);
+    background: ${Theme.colors.primaryBg};
 
 `
 const PhotoWrapper = styled.div`
