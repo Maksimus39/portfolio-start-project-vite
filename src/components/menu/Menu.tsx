@@ -13,7 +13,6 @@ export const Menu = (props: Props) => {
                     return (
                         <ListItem key={index}>
                             <Link href="">{el}</Link>
-
                         </ListItem>
                     )
                 })}
@@ -31,7 +30,6 @@ const StyledMenu = styled.nav`
         justify-content: center;
     }
 `
-
 const StyleButton = styled.button`
     background-color: ${Theme.colors.accentBg};
     width: 112px;
@@ -42,17 +40,12 @@ const StyleButton = styled.button`
     align-items: center;
     justify-content: center;
     color: ${Theme.colors.primaryBg};
-    font-family: 'Epilogue', serif;
     font-weight: 400;
     font-size: 16px;
     
 `
-
 const ListItem = styled.li``
-
-
 const Link = styled.a`
-    font-family: 'Epilogue', serif;
     font-weight: 400;
     font-size: 16px;
     color: ${Theme.colors.accentBg};
