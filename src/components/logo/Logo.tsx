@@ -4,7 +4,9 @@ import styled from "styled-components";
 export const Logo = () => {
     return (
         <StyledLink href="">
-            <Icon iconId={"react"}/>
+            <a href="https://react.dev/blog/2024/12/05/react-19" target={"_blank"}>
+                <Icon iconId={"react"}/>
+            </a>
         </StyledLink>
     );
 };
