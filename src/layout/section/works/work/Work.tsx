@@ -1,14 +1,16 @@
 import styled from "styled-components";
+import {Theme} from "../../../../styles/Theme.ts";
 
 type Props = {
     image: string;
     title: string;
+    titleOne: string;
     titleText: string;
     description: string;
 };
 
 export const Work = (props: Props) => {
-    const {image, title, titleText, description} = props;
+    const {image, title, titleOne, titleText, description} = props;
 
     return (
         <StyledWork>
@@ -18,6 +20,7 @@ export const Work = (props: Props) => {
                     <ContentWrapper>
                         <LeftContent>
                             <Title>{title}</Title>
+                            <TitleOne>{titleOne}</TitleOne>
                             <TitleText>{titleText}</TitleText>
                         </LeftContent>
                         <RightContent>
@@ -35,73 +38,93 @@ export const Work = (props: Props) => {
 };
 
 const StyledWork = styled.div`
-    max-width: 1040px;
+    min-width: 1040px;
+    min-height: 447px;
     width: 100%;
     margin-bottom: 78px;
 `;
-
 const ImageContainer = styled.div`
     position: relative;
     width: 100%;
 `;
-
 const Image = styled.img`
     width: 100%;
     height: 447px;
     object-fit: cover;
     display: block;
 `;
-
 const TextOverlay = styled.div`
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;  // Растягиваем на всю высоту карточки
+    bottom: 0;
     display: flex;
-    flex-direction: column;  // Текст будет в столбик
-    justify-content: center; // Центрируем по вертикали
-    align-items: center;     // Центрируем по горизонтали
-    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     color: white;
 `;
-
 const ContentWrapper = styled.div`
     display: flex;
-    width: 100%;            // Занимает всю ширину TextOverlay
-    max-width: 900px;       // Ограничиваем ширину (опционально)
-    justify-content: space-between; // Разделяем на лево/право
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 81px;
 `;
-
 const LeftContent = styled.div`
-  text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 434px;
+    height: 202px;
+    text-align: left;
+    gap: 16px;
 `;
-
 const RightContent = styled.div`
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    width: 434px;
+    height: 215px;
+    text-align: left;
+    gap: 24px;
 `;
-
-const Title = styled.h3`
-    margin: 0 0 8px 0;
+const Title = styled.span`
+    width: 433px;
+    height: 24px;
+    font-family: "Epilogue", serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
 `;
-
 const TitleText = styled.h4`
-    //margin: 0 0 12px 0;
-    //font-weight: normal;
+    font-family: "Epilogue", serif;
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 120%;
+    color: ${Theme.colors.primaryBg};
 `;
-
 const Description = styled.p`
-    margin: 0 0 16px 0;
+    font-family: "Epilogue", serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: ${Theme.colors.primaryBg};
 `;
-
 const Links = styled.div`
     display: flex;
     gap: 16px;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 `;
-
 const Link = styled.a`
-    color: white;
-    text-decoration: none;
+    font-family: "Epilogue", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #fff;
 `;
+const TitleOne = styled.span`
+    font-family: "Epilogue", serif;
+    font-weight: 200;
+    font-size: 45px;
+`

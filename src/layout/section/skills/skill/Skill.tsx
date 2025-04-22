@@ -21,7 +21,6 @@ export const Skill = (props: Props) => {
                         <SkillText>{skillText}</SkillText>
                     </SkillContent>
                 </Wrapper>
-
             </FlexWrapper>
         </StyledSkill>
     );
@@ -33,7 +32,6 @@ const StyledSkill = styled.div`
     margin-bottom: 20px;
     width: 325px;
 `;
-
 const SkillNumber = styled.span`
     display: flex;
     flex-direction: row;
@@ -42,19 +40,16 @@ const SkillNumber = styled.span`
     font-weight: 100;
     font-size: 70px;
 `;
-
 const SkillContent = styled.div`
     display: flex;
     flex-direction: column;
 `;
-
 const SkillTitle = styled.h3`
     font-family: "Epilogue", serif;
     font-weight: 300;
     font-size: 30px;
     color: ${Theme.colors.primaryBg};
 `;
-
 const SkillText = styled.p`
     font-family: "Epilogue", serif;
     font-weight: 200;
@@ -62,7 +57,6 @@ const SkillText = styled.p`
     line-height: 123%;
     color: ${Theme.colors.primaryBg};
 `;
-
 const Wrapper = styled.div`
     width: 100%; // Ширина 100% от родительского контейнера
     height: auto; // Высота автоматическая

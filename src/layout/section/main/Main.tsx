@@ -12,7 +12,7 @@ export const Main = () => {
                     <TextWrapper>
                         <HelloText>HELLO</HelloText>
                         <NameText>I'M MAXIM</NameText>
-                        <MainTitle>A frontend developer</MainTitle>
+                        <MainTitle>A`m frontend developer</MainTitle>
                     </TextWrapper>
 
                     <PhotoWrapper>

@@ -9,24 +9,29 @@ import {Theme} from "../../../styles/Theme.ts";
 export const Works = () => {
     return (
         <StyledWorks>
+            <FlexWrapper direction={"column"} align={"start"}>
+                <TextWrapper>
+                    <SectionTitle>MY</SectionTitle>
+                    <SectionTitle>PROJECTS</SectionTitle>
+                </TextWrapper>
 
-            <SectionTitle>MY</SectionTitle>
-            <SectionTitle>PROJECTS</SectionTitle>
 
-            <FlexWrapper direction={"column"} align={"center"}>
                 <Work image={MentalHealth}
                       title={"Mental Health"}
-                      titleText={"A Case Study_Find Peace in Meditation"}
+                      titleOne={"A Case Study_"}
+                      titleText={"Find Peace in Meditation"}
                       description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."}
                 />
                 <Work image={FashionShow}
                       title={"Fashion Show"}
-                      titleText={"A Case Study_Enjoy Fashion Shows From Home"}
+                      titleOne={"A Case Study_"}
+                      titleText={"Enjoy Fashion Shows From Home"}
                       description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."}
                 />
                 <Work image={Barbeque}
                       title={"Barbeque"}
-                      titleText={"A Case Study_Enjoy Fashion Shows From Home"}
+                      titleOne={"Branding_"}
+                      titleText={"Chicken Barbeque Never Goes Wrong"}
                       description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."}
                 />
             </FlexWrapper>
@@ -36,9 +41,24 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
     min-height: 100vh;
+    width: 100vw;
     background-color: ${Theme.colors.primaryBg};
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
-
 const SectionTitle = styled.h2`
-    margin: 0;
+    font-family: "Epilogue", serif;
+    font-weight: 800;
+    font-size: 120px;
+    line-height: 93%;
 `
+const TextWrapper = styled.div`
+    margin-top: 170px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 772px;
+    height: 224px;
+`;
