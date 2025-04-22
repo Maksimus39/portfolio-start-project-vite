@@ -72,13 +72,13 @@ const MainTitle = styled.h1`
     font-weight: 600;
     font-size: 52px;
     letter-spacing: 0;
-    z-index: 9998;
+    z-index: 98;
 `
 const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    z-index: 9999;
+    z-index: 99;
 `;
 const HelloText = styled.span`
     font-family: "Epilogue", serif;

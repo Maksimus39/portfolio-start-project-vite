@@ -1,32 +1,11 @@
-// import styled from "styled-components";
-//
-// type Props = {
-//     skillTitle: string
-//     skillText: string
-// }
-// export const Skill = (props: Props) => {
-//     const {skillTitle, skillText} = props;
-//
-//     return (
-//         <StyledSkill>
-//             <SkillTitle>{skillTitle}</SkillTitle>
-//             <SkillText>{skillText}</SkillText>
-//         </StyledSkill>
-//     );
-// };
-//
-// const StyledSkill = styled.div`
-//     width: 33%
-// `
-// const SkillTitle = styled.h3``
-// const SkillText = styled.p``
-
 import styled from "styled-components";
+import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
+import {Theme} from "../../../../styles/Theme.ts";
 
 type Props = {
     skillTitle: string
     skillText: string
-    index: number // Добавляем пропс для номера
+    index: number
 }
 
 export const Skill = (props: Props) => {
@@ -34,11 +13,16 @@ export const Skill = (props: Props) => {
 
     return (
         <StyledSkill>
-            <SkillNumber>{String(index + 1).padStart(2, '0')}.</SkillNumber>
-            <SkillContent>
-                <SkillTitle>{skillTitle}</SkillTitle>
-                <SkillText>{skillText}</SkillText>
-            </SkillContent>
+            <FlexWrapper direction={"column"} align={"flex-start"}>
+                <Wrapper>
+                    <SkillNumber>{String(index + 1).padStart(2, '0')}.</SkillNumber>
+                    <SkillContent>
+                        <SkillTitle>{skillTitle}</SkillTitle>
+                        <SkillText>{skillText}</SkillText>
+                    </SkillContent>
+                </Wrapper>
+
+            </FlexWrapper>
         </StyledSkill>
     );
 };
@@ -47,16 +31,16 @@ const StyledSkill = styled.div`
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
-
-    width: 30%;
-
+    width: 325px;
 `;
 
 const SkillNumber = styled.span`
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    min-width: 25px; // Фиксированная ширина для выравнивания
+    display: flex;
+    flex-direction: row;
+    color: ${Theme.colors.primaryBg};
+    font-family: "Epilogue", serif;
+    font-weight: 100;
+    font-size: 70px;
 `;
 
 const SkillContent = styled.div`
@@ -65,13 +49,25 @@ const SkillContent = styled.div`
 `;
 
 const SkillTitle = styled.h3`
-    margin: 0;
-    //font-size: 18px;
-    //color: #333;
+    font-family: "Epilogue", serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: ${Theme.colors.primaryBg};
 `;
 
 const SkillText = styled.p`
-    //margin: 4px 0 0 0;
-    //font-size: 14px;
-    //color: #666;
+    font-family: "Epilogue", serif;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 123%;
+    color: ${Theme.colors.primaryBg};
 `;
+
+const Wrapper = styled.div`
+    width: 100%; // Ширина 100% от родительского контейнера
+    height: auto; // Высота автоматическая
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; // Выравнивание по верхнему краю
+    gap: 35px;
+`
