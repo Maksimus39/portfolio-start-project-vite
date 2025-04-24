@@ -44,10 +44,11 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-    margin: 0 auto;
+    //margin: 0 auto;
     width: 100%;
     background-color: ${Theme.colors.secondaryBG};
     max-width: 1440px;
     min-height: 597px;
     padding: 102px 52px 144px 52px;
+    margin-top: 106px;
 `
