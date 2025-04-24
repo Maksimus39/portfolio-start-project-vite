@@ -8,8 +8,6 @@ export const Footer = () => {
         <StyledFooter>
             <Line/>
             <ContentWrapper>
-
-
                 <FlexWrapper direction={"row"} align={"center"}>
                     <StyledCopyRight>2022 Resume. All right reserved.</StyledCopyRight>
                     <SocialList>
@@ -25,8 +23,6 @@ export const Footer = () => {
                         </SocialItem>
                     </SocialList>
                 </FlexWrapper>
-
-
             </ContentWrapper>
         </StyledFooter>
     );
@@ -40,12 +36,12 @@ const StyledFooter = styled.footer`
     flex-direction: column;
     align-items: center;
 `;
-const Line = styled.hr`
-    margin: 0;
-    width: 1280px;
-    height: 3px;
-    background-color: black;
-`;
+ const Line = styled.hr`
+     margin: 0;
+     width: 1280px;
+     height: 3px;
+     background-color: black;
+ `;
 
 const ContentWrapper = styled.div`
     display: flex;
