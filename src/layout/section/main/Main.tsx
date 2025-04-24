@@ -27,9 +27,10 @@ export const Main = () => {
 
 
 const StyledMain = styled.div`
-    min-height: 100vh;
+    width: 100%;
     background: ${Theme.colors.primaryBg};
     display: flex;
+    justify-content: center;
 `
 const PhotoWrapper = styled.div`
     margin-top: 210px;
