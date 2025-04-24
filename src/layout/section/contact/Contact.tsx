@@ -77,6 +77,13 @@ const Field = styled.input`
     height: 48px;
     border: 1px solid black;
     padding: 12px;
+
+
+    font-family: Epilogue, serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #505050;
 `
 const Paragraph = styled.p`
     width: 400px;

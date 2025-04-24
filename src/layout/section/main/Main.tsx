@@ -37,7 +37,6 @@ const PhotoWrapper = styled.div`
     position: relative;
     width: 570px;
     height: 570px;
-
     margin-left: -240px;
 `;
 const Photo = styled.img`
