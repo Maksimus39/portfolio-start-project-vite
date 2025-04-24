@@ -5,43 +5,52 @@ import photo from "./../../../assets/images/myPhoto.webp"
 export const AboutMe = () => {
     return (
         <StyledAboutMe>
-            <LeftColumn>
-                <Text>About Me</Text>
-                <LeftDescription>I look at usual things with my unsual eyes.</LeftDescription>
-                <MyPhotoLeft src={photo} alt="myPhoto"/>
-            </LeftColumn>
-            <RightColumn>
-                <RightDescription>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam consectetur
-                    deserunt, dicta
-                    dolor dolorum ea explicabo facilis fugit in ipsa iure libero maxime molestias mollitia optio
-                    pariatur porro quaerat quibusdam quidem quisquam quo quod sed soluta sunt ullam, ut veritatis!
-                    Accusantium animi assumenda, at laboriosam praesentium rem sequi sit voluptatibus! Asperiores
-                    consequatur culpa enim libero quaerat quasi sed voluptatibus. Culpa esse hic laboriosam
-                    perspiciatis? Accusamus aliquid, assumenda at autem beatae dolore ducimus ea earum enim eos esse ex
-                    inventore ipsum iusto laboriosam libero natus necessitatibus non quae rerum sequi sunt tenetur
-                    voluptas. A ab accusamus assumenda beatae consequatur, culpa cumque cupiditate dicta distinctio
-                    dolores eius esse excepturi exercitationem facilis harum libero mollitia nam nisi non nostrum nulla,
-                    possimus quae quaerat quam quasi quis sequi, suscipit? Impedit minus modi quis sapiente soluta
-                    vitae! Aperiam atque consequatur dignissimos ea earum explicabo id illo iure molestiae nisi
-                    obcaecati, placeat praesentium qui quis quisquam quod reiciendis sint suscipit tenetur voluptatum?
-                </RightDescription>
-                <MyPhotoRight src={photo} alt="myPhoto"/>
-            </RightColumn>
+            <ContentWrapper>
+                <LeftColumn>
+                    <Text>About Me</Text>
+                    <LeftDescription>I look at usual things with my unsual eyes.</LeftDescription>
+                    <MyPhotoLeft src={photo} alt="myPhoto"/>
+                </LeftColumn>
+                <RightColumn>
+                    <RightDescription>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam consectetur
+                        deserunt, dicta
+                        dolor dolorum ea explicabo facilis fugit in ipsa iure libero maxime molestias mollitia optio
+                        pariatur porro quaerat quibusdam quidem quisquam quo quod sed soluta sunt ullam, ut veritatis!
+                        Accusantium animi assumenda, at laboriosam praesentium rem sequi sit voluptatibus! Asperiores
+                        consequatur culpa enim libero quaerat quasi sed voluptatibus. Culpa esse hic laboriosam
+                        perspiciatis? Accusamus aliquid, assumenda at autem beatae dolore ducimus ea earum enim eos esse
+                        ex
+                        inventore ipsum iusto laboriosam libero natus necessitatibus non quae rerum sequi sunt tenetur
+                        voluptas. A ab accusamus assumenda beatae consequatur, culpa cumque cupiditate dicta distinctio
+                        dolores eius esse excepturi exercitationem facilis harum libero mollitia nam nisi non nostrum
+                        nulla,
+                        possimus quae quaerat quam quasi quis sequi, suscipit? Impedit minus modi quis sapiente soluta
+                        vitae! Aperiam atque consequatur dignissimos ea earum explicabo id illo iure molestiae nisi
+                        obcaecati, placeat praesentium qui quis quisquam quod reiciendis sint suscipit tenetur
+                        voluptatum?
+                    </RightDescription>
+                    <MyPhotoRight src={photo} alt="myPhoto"/>
+                </RightColumn>
+            </ContentWrapper>
+
         </StyledAboutMe>
     );
 };
-
+const ContentWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 79px;
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 20px;
+`
 
 const StyledAboutMe = styled.section`
     width: 100%;
-    min-width: 1440px;
-    min-height: 1470px;
     background-color: ${Theme.colors.secondaryBG};
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 79px;
-    padding-top: 110px;
+    justify-content: center;
+    padding: 110px 0;
 `
 const LeftColumn = styled.div`
     width: 511px;
@@ -82,7 +91,7 @@ const MyPhotoLeft = styled.img`
     width: 532px;
     height: 498px;
     object-fit: cover;
-  
+
 `
 const RightDescription = styled.div`
     width: 100%;
