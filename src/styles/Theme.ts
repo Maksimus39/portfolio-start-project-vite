@@ -8,4 +8,9 @@ export const Theme = {
         textBg: "#F2F2F2",
         textBlack: "#000000",
     },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
+    }
 }

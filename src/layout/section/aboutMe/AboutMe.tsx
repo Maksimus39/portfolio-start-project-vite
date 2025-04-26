@@ -5,7 +5,6 @@ import photo from "./../../../assets/images/myPhoto.webp"
 export const AboutMe = () => {
     return (
         <StyledAboutMe>
-            <ContentWrapper>
                 <LeftColumn>
                     <Text>About Me</Text>
                     <LeftDescription>I look at usual things with my unsual eyes.</LeftDescription>
@@ -31,19 +30,9 @@ export const AboutMe = () => {
                     </RightDescription>
                     <MyPhotoRight src={photo} alt="myPhoto"/>
                 </RightColumn>
-            </ContentWrapper>
-
         </StyledAboutMe>
     );
 };
-const ContentWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    gap: 79px;
-    max-width: 1440px;
-    width: 100%;
-    padding: 0 20px;
-`
 
 const StyledAboutMe = styled.section`
     width: 100%;
@@ -51,6 +40,10 @@ const StyledAboutMe = styled.section`
     display: flex;
     justify-content: center;
     padding: 110px 0;
+    gap: 79px;
+    max-width: 1440px;
+    min-height: 540px;
+    margin: 0 auto;
 `
 const LeftColumn = styled.div`
     width: 511px;
