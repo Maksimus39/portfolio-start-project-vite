@@ -7,6 +7,9 @@ export const Theme = {
 
         textBg: "#F2F2F2",
         textBlack: "#000000",
+        burgerButton: "#292D32",
+        MobileMenuPopUp: "#F1F1F1",
+        BordersColor:  "#828282"
     },
 
     media: {

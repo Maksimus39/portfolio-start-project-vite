@@ -53,21 +53,19 @@ const ContentWrapper = styled.div`
     width: 100%;
     padding-top: 66px;
 `;
-const SocialList = styled.ul`
+ const SocialList = styled.ul`
     display: flex;
     gap: 12px;
 `;
-const SocialItem = styled.li`
+ const SocialItem = styled.li`
     display: flex;
     list-style: none;
 `;
-const SocialLinc = styled.a``
+ const SocialLinc = styled.a``
 
 const StyledCopyRight = styled.small`
     font-family: Roboto, serif;
     font-weight: 400;
     font-size: 14px;
     white-space: nowrap;
-
-
 `;
