@@ -64,7 +64,6 @@ const MobileMenuPopUp = styled.div`
     align-items: center;
     gap: 30px;
     display: flex;
-    border: 1px solid ${Theme.colors.MobileMenuPopUp};
 `
 const MobileMenuList = styled.ul`
     display: flex;
@@ -160,6 +159,7 @@ export const BurgerButton = styled.button<{ isOpen: boolean }>`
 const SocialList = styled.ul`
     display: flex;
     gap: 12px;
+    margin-right: 342px;
 `;
 const SocialItem = styled.li`
     display: flex;
