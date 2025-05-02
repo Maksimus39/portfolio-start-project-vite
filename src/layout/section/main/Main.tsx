@@ -129,9 +129,12 @@ const TextWrapper = styled.div`
     align-items: flex-start;
     z-index: 99;
 
+    max-width: 50%;
     @media ${Theme.media.mobile} {
         margin-top: 50px; // Уменьшаем отступ сверху
         min-height: 40vh; // Занимает 40% высоты экрана
+
+        max-width: 100%;
     }
 `;
 const HelloText = styled.span`
