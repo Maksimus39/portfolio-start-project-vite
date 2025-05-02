@@ -11,7 +11,7 @@ export const MobileMenu = (props: Props) => {
 
 
     return (
-        <StyledMobileMenu isOpen={true}>
+        <StyledMobileMenu isOpen={false}>
             <MobileMenuPopUp>
                 <MobileMenuList>
                     {props.menuItems.map((el, index) => {
@@ -113,7 +113,7 @@ export const BurgerButton = styled.button<{ isOpen: boolean }>`
         width: 24px;
         height: 2px;
         background-color: ${Theme.colors.burgerButton};
-        position: relative;
+        position: absolute;
         transition: all 0.3s;
 
         ${props => props.isOpen && css`
@@ -127,7 +127,8 @@ export const BurgerButton = styled.button<{ isOpen: boolean }>`
             background-color: ${Theme.colors.burgerButton};
             position: absolute;
             top: -8px;
-            transition: transform 0.3s;
+            //transition: transform 0.3s;
+            transform: translateY(-3px);
 
             ${props => props.isOpen && css`
                 transform: rotate(45deg);
@@ -143,7 +144,8 @@ export const BurgerButton = styled.button<{ isOpen: boolean }>`
             background-color: ${Theme.colors.burgerButton};
             position: absolute;
             top: 8px;
-            transition: transform 0.3s;
+            //transition: transform 0.3s;
+            transform: translateY(3px);
 
             ${props => props.isOpen && css`
                 transform: rotate(-45deg);

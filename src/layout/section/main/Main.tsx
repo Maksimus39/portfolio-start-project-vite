@@ -2,12 +2,10 @@ import ImagePhoto from "./../../../assets/images/myPhoto.webp"
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Theme} from "../../../styles/Theme.ts";
-import {Container} from "../../../components/container/Container.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
                     <TextWrapper>
                         <HelloText>HELLO</HelloText>
@@ -20,7 +18,6 @@ export const Main = () => {
                         <Photo src={ImagePhoto} alt="Photo"/>
                     </PhotoWrapper>
                 </FlexWrapper>
-            </Container>
         </StyledMain>
     );
 };

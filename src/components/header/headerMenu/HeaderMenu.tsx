@@ -20,7 +20,7 @@ export const HeaderMenu = (props: Props) => {
             </MenuList>
             <StyleButton>Let’s Talk</StyleButton>
             <BurgerButton isOpen={false}>
-                <span></span>
+                <BurgerMenu></BurgerMenu>
             </BurgerButton>
         </StyledHeaderMenu>
     );
@@ -32,27 +32,24 @@ const StyledHeaderMenu = styled.nav`
     gap: 32px;
 
     @media ${Theme.media.tablet} {
-        justify-content: flex-end; 
+        justify-content: flex-end;
     }
 `
-
 const ListItem = styled.li``
 const Link = styled.a`
     font-weight: 400;
     font-size: 16px;
     color: ${Theme.colors.accentBg};
 `
-
 const MenuList = styled.ul`
     display: flex;
     gap: 32px;
     align-items: center;
 
     @media ${Theme.media.tablet} {
-        display: none; 
+        display: none;
     }
 `
-
 const StyleButton = styled.button`
     background-color: ${Theme.colors.accentBg};
     width: 112px;
@@ -64,9 +61,12 @@ const StyleButton = styled.button`
     border: none;
     cursor: pointer;
 
-    
+
     @media ${Theme.media.tablet} {
         margin-left: auto;
         margin-right: 30px;
     }
+`
+const BurgerMenu = styled.span`
+    margin-left: 8px;
 `
