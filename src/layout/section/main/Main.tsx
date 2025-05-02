@@ -2,11 +2,14 @@ import ImagePhoto from "./../../../assets/images/myPhoto.webp"
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Theme} from "../../../styles/Theme.ts";
+import {Container} from "../../../components/container/Container.ts";
+import {font} from "../../../styles/Common.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+            <Container>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"} >
                     <TextWrapper>
                         <HelloText>HELLO</HelloText>
                         <NameText>I'M MAXIM</NameText>
@@ -18,6 +21,7 @@ export const Main = () => {
                         <Photo src={ImagePhoto} alt="Photo"/>
                     </PhotoWrapper>
                 </FlexWrapper>
+            </Container>
         </StyledMain>
     );
 };
@@ -28,15 +32,28 @@ const StyledMain = styled.div`
     background: ${Theme.colors.primaryBg};
     display: flex;
     justify-content: center;
+    min-height: 100vh; // Занимает всю высоту экрана
+
+    @media ${Theme.media.mobile} {
+        padding: 20px 0; // Добавляем отступы сверху и снизу
+    }
 `
 const PhotoWrapper = styled.div`
     margin-top: 210px;
     position: relative;
     width: 570px;
     height: 570px;
-
     margin-left: -240px;
-`;
+
+    // mobile 
+    @media ${Theme.media.mobile} {
+        width: 300px;
+        height: 300px;
+        margin: 50px auto 0; /* Центрирование по горизонтали и отступ сверху 422px */
+        left: 0;
+        right: 0;
+    }
+`
 const Photo = styled.img`
     width: 570px;
     height: 570px;
@@ -46,6 +63,12 @@ const Photo = styled.img`
     top: 0;
     left: 0;
     z-index: 1;
+
+    // mobile 
+    @media ${Theme.media.mobile} {
+        width: 100%; // или явно 300px, если нужно
+        height: 100%;
+    }
 `
 const BackgroundPhoto = styled.div`
     width: 570px;
@@ -60,37 +83,99 @@ const BackgroundPhoto = styled.div`
     top: 0;
     left: 0;
     z-index: 0;
+
+    // mobile
+    @media ${Theme.media.mobile} {
+        width: 100%;
+        height: 100%;
+    }
 `;
+
 const MainTitle = styled.h1`
+    ${font({
+        weight: 600,
+        Fmax: 52,
+        Fmin: 28,
+        lineHeight: 1.2,
+    })}
     width: 656px;
-    height: 194px;
     display: flex;
     justify-content: center;
-
-    font-weight: 600;
-    font-size: 52px;
     letter-spacing: 0;
     z-index: 98;
-`
+    white-space: normal; /* Разрешаем перенос по умолчанию */
+
+    /* Мобильная версия */
+    @media ${Theme.media.mobile} {
+        width: 100%; /* Занимает всю ширину */
+        padding: 0 15px; /* Добавляем отступы по бокам */
+        height: auto; /* Автоматическая высота */
+        text-align: left; /* Центрируем текст */
+        word-wrap: break-word; /* Перенос длинных слов */
+        overflow-wrap: break-word; /* Современный аналог */
+        word-break: break-word; /* Страховка для некоторых браузеров */
+        margin: 10px 0;
+
+        letter-spacing: -0.5px;
+    }
+
+    /* Десктопная версия */
+    @media (min-width: 768px) {
+        white-space: nowrap; /* Запрещаем перенос на десктопе */
+    }
+`;
+
+
 const TextWrapper = styled.div`
+    margin-top: 133px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     z-index: 99;
+
+    @media ${Theme.media.mobile} {
+        margin-top: 50px; // Уменьшаем отступ сверху
+        min-height: 40vh; // Занимает 40% высоты экрана
+    }
 `;
+
+
 const HelloText = styled.span`
-    font-family: "Epilogue", serif;
-    font-weight: 800;
-    font-size: 150px;
+    ${font({family: "'Epilogue', serif", weight: 800, Fmax: 150, Fmin: 75})}
+    margin-top: 133px;
     color: ${Theme.colors.accentBg};
     white-space: nowrap;
     letter-spacing: 0;
+
+    @media ${Theme.media.mobile} {
+        white-space: normal;
+        // Можно переопределить параметры шрифта для мобильных
+        ${font({family: "'Epilogue', serif", weight: 800, Fmax: 80, Fmin: 40})}
+    }
 `;
+
+
 const NameText = styled.span`
-    font-weight: 800;
-    font-size: 150px;
-    color: ${Theme.colors.accentBg};
+    ${font({
+        family: "'Epilogue', serif",
+        weight: 800,
+        Fmax: 150,
+        Fmin: 75,
+        color: Theme.colors.accentBg,
+        lineHeight: 1
+    })}
     white-space: nowrap;
     letter-spacing: 0;
     margin: 10px 0;
+
+    @media ${Theme.media.mobile} {
+        ${font({
+            family: "'Epilogue', serif",
+            weight: 800,
+            Fmax: 80,
+            Fmin: 40,
+            color: Theme.colors.accentBg
+        })}
+        white-space: normal;
+    }
 `;
