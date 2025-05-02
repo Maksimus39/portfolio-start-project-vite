@@ -9,7 +9,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"} >
+                <FlexWrapper align={"center"} justify={"space-around"} wrap={"wrap"} >
                     <TextWrapper>
                         <HelloText>HELLO</HelloText>
                         <NameText>I'M MAXIM</NameText>
@@ -49,7 +49,7 @@ const PhotoWrapper = styled.div`
     @media ${Theme.media.mobile} {
         width: 300px;
         height: 300px;
-        margin: 50px auto 0; /* Центрирование по горизонтали и отступ сверху 422px */
+        margin: 50px auto 0; 
         left: 0;
         right: 0;
     }
@@ -90,7 +90,6 @@ const BackgroundPhoto = styled.div`
         height: 100%;
     }
 `;
-
 const MainTitle = styled.h1`
     ${font({
         weight: 600,
@@ -108,14 +107,13 @@ const MainTitle = styled.h1`
     /* Мобильная версия */
     @media ${Theme.media.mobile} {
         width: 100%; /* Занимает всю ширину */
-        padding: 0 15px; /* Добавляем отступы по бокам */
+        margin: 10px auto;
         height: auto; /* Автоматическая высота */
         text-align: left; /* Центрируем текст */
         word-wrap: break-word; /* Перенос длинных слов */
         overflow-wrap: break-word; /* Современный аналог */
         word-break: break-word; /* Страховка для некоторых браузеров */
-        margin: 10px 0;
-
+        white-space: wrap;
         letter-spacing: -0.5px;
     }
 
@@ -124,8 +122,6 @@ const MainTitle = styled.h1`
         white-space: nowrap; /* Запрещаем перенос на десктопе */
     }
 `;
-
-
 const TextWrapper = styled.div`
     margin-top: 133px;
     display: flex;
@@ -138,8 +134,6 @@ const TextWrapper = styled.div`
         min-height: 40vh; // Занимает 40% высоты экрана
     }
 `;
-
-
 const HelloText = styled.span`
     ${font({family: "'Epilogue', serif", weight: 800, Fmax: 150, Fmin: 75})}
     margin-top: 133px;
@@ -153,8 +147,6 @@ const HelloText = styled.span`
         ${font({family: "'Epilogue', serif", weight: 800, Fmax: 80, Fmin: 40})}
     }
 `;
-
-
 const NameText = styled.span`
     ${font({
         family: "'Epilogue', serif",
