@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper.tsx";
 import {Theme} from "../../../../styles/Theme.ts";
+import {font} from "../../../../styles/Common.ts";
 
 type Props = {
     skillTitle: string
@@ -28,34 +29,63 @@ export const Skill = (props: Props) => {
 
 const StyledSkill = styled.div`
     display: flex;
-    gap: 15px;
+    column-gap: 8px;
+    row-gap: 59px;
     margin-bottom: 20px;
-    width: 325px;
+    width: 440px;
+    min-height: 146px;
+    
+    @media ${Theme.media.mobile} {
+        width: 300px;
+        min-height: 114px;
+        column-gap: 40px;
+    }
 `;
 const SkillNumber = styled.span`
     display: flex;
     flex-direction: row;
-    color: ${Theme.colors.primaryBg};
-    font-family: "Epilogue", serif;
-    font-weight: 100;
-    font-size: 70px;
+    ${font({
+        family: "Epilogue",
+        weight: 100,
+        color: Theme.colors.primaryBg,
+        Fmin: 45,  // минимальный размер для мобильных
+        Fmax: 70   // максимальный размер для десктопов
+    })}
+
+    @media ${Theme.media.mobile} {
+    font-weight: 100; // это можно убрать, так как вес уже задан в font()
+}
 `;
 const SkillContent = styled.div`
     display: flex;
     flex-direction: column;
 `;
 const SkillTitle = styled.h3`
-    font-family: "Epilogue", serif;
-    font-weight: 300;
-    font-size: 30px;
-    color: ${Theme.colors.primaryBg};
+    ${font({
+        family: "Epilogue",
+        weight: 300,
+        color: Theme.colors.primaryBg,
+        Fmin: 25,  // Минимальный размер (мобильные)
+        Fmax: 30   // Максимальный размер (десктопы)
+    })}
+
+    @media ${Theme.media.mobile} {
+    font-weight: 300; // Можно оставить, если нужны дополнительные стили
+}
 `;
 const SkillText = styled.p`
-    font-family: "Epilogue", serif;
-    font-weight: 200;
-    font-size: 18px;
-    line-height: 123%;
-    color: ${Theme.colors.primaryBg};
+    ${font({
+        family: "Epilogue",
+        weight: 200,
+        color: Theme.colors.primaryBg,
+        lineHeight: '123%',  // Сохраняем line-height
+        Fmin: 14,  // Минимальный размер (мобильные)
+        Fmax: 18   // Максимальный размер (десктопы)
+    })}
+
+    @media ${Theme.media.mobile} {
+    font-weight: 200; // Можно оставить, если нужны дополнительные стили
+}
 `;
 const Wrapper = styled.div`
     width: 100%; // Ширина 100% от родительского контейнера
