@@ -49,7 +49,7 @@ const skill: SkillType[] = [
 export const Skills = () => {
     return (
         <StyledSkills>
-            <FlexWrapper wrap={"wrap"} justify={"space-around"}>
+            <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                 {skill.map(el => {
                     return (
                         <Skill skillTitle={el.skillTitle}

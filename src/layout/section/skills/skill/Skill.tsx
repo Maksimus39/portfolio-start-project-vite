@@ -29,6 +29,7 @@ export const Skill = (props: Props) => {
 
 const StyledSkill = styled.div`
     display: flex;
+    flex-grow: 1;
     column-gap: 8px;
     row-gap: 59px;
     margin-bottom: 20px;
