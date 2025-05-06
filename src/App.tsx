@@ -13,7 +13,7 @@ function App() {
             <Header/>
             <Main/>
             <Skills/>
-            {/*<Works/>*/}
+            <Works/>
             {/*<AboutMe/>*/}
             {/*<Contact/>*/}
             {/*<Footer/>*/}

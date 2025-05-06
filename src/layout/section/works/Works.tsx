@@ -9,7 +9,7 @@ import {Theme} from "../../../styles/Theme.ts";
 export const Works = () => {
     return (
         <StyledWorks>
-            <FlexWrapper direction={"column"} align={"start"}>
+            <FlexWrapper direction={"column"} align={"start"} wrap={"wrap"}>
                 <TextWrapper>
                     <SectionTitle>MY</SectionTitle>
                     <SectionTitle>PROJECTS</SectionTitle>
@@ -52,6 +52,10 @@ const SectionTitle = styled.h2`
     font-weight: 800;
     font-size: 120px;
     line-height: 93%;
+
+    @media ${Theme.media.mobile} {
+        font-size: 65px;
+    }
 `
 const TextWrapper = styled.div`
     margin-top: 170px;
@@ -61,4 +65,10 @@ const TextWrapper = styled.div`
     align-items: flex-start;
     width: 772px;
     height: 224px;
+
+    @media ${Theme.media.mobile} {
+        padding: 170px 16px 2216px 11px;
+        width: 348px;
+        height: 122px;
+    }
 `;
