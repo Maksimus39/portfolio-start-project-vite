@@ -38,10 +38,14 @@ export const Work = (props: Props) => {
 };
 
 const StyledWork = styled.div`
-    min-width: 1040px;
     min-height: 447px;
     width: 100%;
-    margin-bottom: 78px;
+    margin: 0 auto 78px;
+
+    @media ${Theme.media.mobile} {
+        min-width: 344px;
+        min-height: 619px;
+    }
 `;
 const ImageContainer = styled.div`
     position: relative;
@@ -52,6 +56,11 @@ const Image = styled.img`
     height: 447px;
     object-fit: cover;
     display: block;
+
+    @media ${Theme.media.mobile} {
+        min-width: 344px;
+        min-height: 619px;
+    }
 `;
 const TextOverlay = styled.div`
     position: absolute;
@@ -64,37 +73,64 @@ const TextOverlay = styled.div`
     justify-content: space-between;
     align-items: center;
     color: white;
+    flex-wrap: wrap;
+
+    @media ${Theme.media.mobile} {
+     
+        padding: 20px;
+    }
 `;
 const ContentWrapper = styled.div`
     display: flex;
+    flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: space-around;
-    gap: 81px;
+    gap: 20px;
+    padding: 0 20px;
+    @media ${Theme.media.mobile} {
+        flex-direction: column;
+        gap: 22px; /* Изменяем с 30px на 22px по макету */
+        align-items: flex-start;
+    }
 `;
 const LeftContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 434px;
-    height: 202px;
+    max-width: 434px;
+    width: 100%;
     text-align: left;
     gap: 16px;
+
+    @media ${Theme.media.mobile} {
+        max-width: 100%;
+    }
 `;
 const RightContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 434px;
+    max-width: 434px;
+    width: 100%;
     height: 215px;
     text-align: left;
     gap: 24px;
+
+    @media ${Theme.media.mobile} {
+        max-width: 100%; /* Занимаем всю ширину */
+    }
 `;
 const Title = styled.span`
-    width: 433px;
+    //width: 433px;
+    width: 100%;
     height: 24px;
     font-family: "Epilogue", serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
+
+    @media ${Theme.media.mobile} {
+        font-size: 15px;
+    }
 `;
 const TitleText = styled.h4`
     font-family: "Epilogue", serif;
@@ -102,6 +138,11 @@ const TitleText = styled.h4`
     font-size: 45px;
     line-height: 120%;
     color: ${Theme.colors.primaryBg};
+
+    @media ${Theme.media.mobile} {
+        font-weight: 800;
+        font-size: 43px;
+    }
 `;
 const Description = styled.p`
     font-family: "Epilogue", serif;
@@ -109,12 +150,23 @@ const Description = styled.p`
     font-size: 18px;
     line-height: 150%;
     color: ${Theme.colors.primaryBg};
+
+    @media ${Theme.media.mobile} {
+        font-weight: 400;
+        font-size: 17px;
+    }
 `;
 const Links = styled.div`
     display: flex;
     gap: 16px;
     justify-content: start;
     align-items: start;
+
+    @media ${Theme.media.mobile} {
+        width: 96px;
+        height: 38px;
+        gap: 4px;
+    }
 `;
 const Link = styled.a`
     font-family: "Epilogue", serif;
@@ -122,6 +174,10 @@ const Link = styled.a`
     font-size: 16px;
     line-height: 150%;
     color: #fff;
+
+    @media ${Theme.media.mobile} {
+        font-size: 15px;
+    }
 `;
 const TitleOne = styled.span`
     font-family: "Epilogue", serif;
