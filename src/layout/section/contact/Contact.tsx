@@ -7,7 +7,7 @@ export const Contact = () => {
     return (
         <StyledContact>
             <ContactsPortfolio>
-                <div>
+                <OneColumn>
                     <Logo/>
                     <ContactMenu>
                         <ul>
@@ -16,8 +16,8 @@ export const Contact = () => {
                             <li><a href="">Digital Assets</a></li>
                         </ul>
                     </ContactMenu>
-                </div>
-                <div>
+                </OneColumn>
+                <TwoColumn>
                     <TextContact>
                         Subscribe to my emailing list
                     </TextContact>
@@ -27,7 +27,7 @@ export const Contact = () => {
                     </Wrapper>
                      <Paragraph>By subscribing you agree to with our Privacy Policy</Paragraph>  
 
-                </div>
+                </TwoColumn>
             </ContactsPortfolio>
         </StyledContact>
     );
@@ -39,6 +39,11 @@ const StyledContact = styled.section`
     background-color: ${Theme.colors.primaryBg};
     display: flex;
     justify-content: space-around;
+
+    @media ${Theme.media.mobile} {
+        width: 345px;
+        min-height: 302px;
+    }
 `
 const ContactsPortfolio = styled.div`
     width: 1064px;
@@ -46,7 +51,15 @@ const ContactsPortfolio = styled.div`
     margin: 80px 188px 208px 188px;
     display: flex;
     justify-content: space-between;
+
+    @media ${Theme.media.mobile} {
+       display: flex;
+        flex-direction: column;
+    }
 `
+const OneColumn = styled.div``
+const TwoColumn = styled.div``
+
 const ContactMenu = styled.nav`
     ul {
         display: flex;
@@ -93,4 +106,9 @@ const Wrapper = styled.div`
     height: 48px;
     gap: 16px;
     display: flex;
+
+    @media ${Theme.media.mobile} {
+        display: flex;
+        flex-direction: column;
+    }
 `
