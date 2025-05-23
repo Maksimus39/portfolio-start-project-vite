@@ -45,6 +45,10 @@ const Line = styled.hr`
     width: 1280px;
     height: 1px;
     color: ${Theme.colors.textBlack};
+
+    @media ${Theme.media.mobile} {
+        width: 100%;
+    }
 `;
 const ContentWrapper = styled.div`
     display: flex;
