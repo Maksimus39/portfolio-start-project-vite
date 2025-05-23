@@ -13,7 +13,7 @@ export const Footer = () => {
                     <SocialList>
                         <SocialItem>
                             <SocialLinc>
-                                <a href="https://t.me/@Macsimus_Lipeck" target="_blank" rel="noreferrer">
+                                <a href="https://t.me/Macsimus_Lipeck" target="_blank" rel="noreferrer">
                                     <Icon height={"24px"} width={"24px"} viewBox={"0 0 24 24"} iconId={"tg"}/>
                                 </a>
                             </SocialLinc>
