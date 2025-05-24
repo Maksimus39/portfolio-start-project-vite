@@ -67,17 +67,21 @@ const BackgroundPhoto = styled.div`
 `;
 const MainTitle = styled.h1`
     ${font({
-    weight: 600,
-    Fmax: 52,
-    Fmin: 28,
-    lineHeight: 1.2,
-})}
+        weight: 600,
+        Fmax: 52,
+        Fmin: 28,
+        lineHeight: 1.2,
+    })}
     width: 656px;
     display: flex;
     justify-content: center;
     letter-spacing: 0;
     z-index: 98;
     white-space: normal; /* Разрешаем перенос по умолчанию */
+
+    p {
+        display: none;
+    }
 
     /* Мобильная версия */
     @media ${Theme.media.mobile} {

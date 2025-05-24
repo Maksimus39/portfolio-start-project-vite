@@ -13,6 +13,7 @@ export const Main = () => {
                         <S.HelloText>HELLO</S.HelloText>
                         <S.NameText>I'M MAXIM</S.NameText>
                         <S.MainTitle>
+                            <S.MainTitle><p>'A`m frontend developer'</p></S.MainTitle>
                             <Typewriter
                                 options={{
                                     strings: ['A`m frontend developer'],
