@@ -1,30 +1,5 @@
 import styled from "styled-components";
 import {Theme} from "../../../styles/Theme.ts";
-import {BurgerButton} from "../mobileMenu/MobileMenu.tsx";
-
-type Props = {
-    menuItems: string[];
-}
-
-export const HeaderMenu = (props: Props) => {
-    return (
-        <StyledHeaderMenu>
-            <MenuList>
-                {props.menuItems.map((el, index) => {
-                    return (
-                        <ListItem key={index}>
-                            <Link href="">{el}</Link>
-                        </ListItem>
-                    )
-                })}
-            </MenuList>
-            <StyleButton>Let’s Talk</StyleButton>
-            <BurgerButton isOpen={false}>
-                <BurgerMenu></BurgerMenu>
-            </BurgerButton>
-        </StyledHeaderMenu>
-    );
-};
 
 const StyledHeaderMenu = styled.nav`
     display: flex;
@@ -67,6 +42,11 @@ const StyleButton = styled.button`
         margin-right: 30px;
     }
 `
-const BurgerMenu = styled.span`
-    margin-left: 8px;
-`
+
+export const S = {
+    StyledHeaderMenu,
+    ListItem,
+    Link,
+    MenuList,
+    StyleButton,
+}

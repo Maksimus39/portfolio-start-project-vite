@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Skill} from "./skill/Skill.tsx";
-import {Theme} from "../../../styles/Theme.ts";
+import {S} from "./Skills_Style.ts"
+
 
 type SkillType = {
     index: number
@@ -48,7 +48,7 @@ const skill: SkillType[] = [
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <S.StyledSkills>
             <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                 {skill.map(el => {
                     return (
@@ -58,19 +58,6 @@ export const Skills = () => {
                     )
                 })}
             </FlexWrapper>
-        </StyledSkills>
+        </S.StyledSkills>
     );
 };
-
-const StyledSkills = styled.section`
-    width: 100%;
-    background-color: ${Theme.colors.secondaryBG};
-    max-width: 1440px;
-    min-height: 597px;
-    padding: 102px 52px 144px 52px;
-    margin: 106px auto 0;
-
-    @media ${Theme.media.mobile} {
-        padding: 42px 30px 42px 30px;
-    }
-`

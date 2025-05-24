@@ -1,36 +1,38 @@
-import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
-import {HeaderMenu} from "../../components/header/headerMenu/HeaderMenu.tsx";
-import {Theme} from "../../styles/Theme.ts";
+import {HeaderMenu} from "./headerMenu/HeaderMenu.tsx";
 import {Container} from "../../components/container/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {MobileMenu} from "../../components/header/mobileMenu/MobileMenu.tsx";
+import {S} from "./Header_Styles.ts"
+import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+import {useEffect, useState} from "react";
 
+const items = ["Project", "About", "Digital Assets"]
 
-const items = ["Project","About","Digital Assets"]
 export const Header = () => {
+
+    const [width, setWidth] = useState(window.innerWidth)
+    const breakpoint = 768
+
+    useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize)
+        return () => window.removeEventListener("resize", handleWindowResize)
+    }, []);
+
+
     return (
-        <StyledHeader>
+        <S.StyledHeader>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
-                        <Logo/>
-                        <HeaderMenu menuItems={items}/>
-                        <MobileMenu menuItems={items}/>
+                    <Logo/>
+
+                    {width < breakpoint
+                        ? <MobileMenu menuItems={items}/>
+                        : <HeaderMenu menuItems={items}/>
+                    }
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.StyledHeader>
     );
 };
-
-const StyledHeader = styled.header`
-    background-color: ${Theme.colors.primaryBg};
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-    height: 89px;
-`
 
