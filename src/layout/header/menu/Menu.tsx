@@ -1,9 +1,10 @@
-import {S} from "../MobileMenu_Styled.ts";
+import {S} from "../headerMenu/HeaderMenu_Styles.ts";
+
 
 type Props = {
     menuItems: string[];
 }
-const MenuMobile = (props: Props) => {
+export const Menu = (props: Props) => {
     return (
         <>
             {props.menuItems.map((el, index) => {
@@ -17,4 +18,4 @@ const MenuMobile = (props: Props) => {
     );
 };
 
-export default MenuMobile;
+export default Menu;
