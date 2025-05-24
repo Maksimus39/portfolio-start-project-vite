@@ -6,7 +6,6 @@ import {Theme} from "../../../styles/Theme.ts";
 export const Footer = () => {
     return (
         <StyledFooter>
-            <Line/>
             <ContentWrapper>
                 <FlexWrapper direction={"row"} align={"center"} justify={"space-evenly"}>
                     <StyledCopyRight>2025 Resume. All right reserved.</StyledCopyRight>
@@ -39,16 +38,6 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
-const Line = styled.hr`
-    margin: 0;
-    width: 1280px;
-    height: 1px;
-    color: ${Theme.colors.textBlack};
-
-    @media ${Theme.media.mobile} {
-        width: 100%;
-    }
 `;
 const ContentWrapper = styled.div`
     display: flex;
