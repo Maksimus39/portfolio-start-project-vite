@@ -2,7 +2,7 @@ import ImagePhoto from "./../../../assets/images/myPhoto.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/container/Container.ts";
 import {S} from "./Main_Styles.ts"
-
+import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
     return (
@@ -12,7 +12,16 @@ export const Main = () => {
                     <S.TextWrapper>
                         <S.HelloText>HELLO</S.HelloText>
                         <S.NameText>I'M MAXIM</S.NameText>
-                        <S.MainTitle>A`m frontend developer</S.MainTitle>
+                        <S.MainTitle>
+                            <Typewriter
+                                options={{
+                                    strings: ['A`m frontend developer'],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </S.MainTitle>
+
                     </S.TextWrapper>
 
                     <S.PhotoWrapper>
