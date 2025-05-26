@@ -8,7 +8,7 @@ export const Theme = {
         textBg: "#F2F2F2",
         textBlack: "#000000",
         burgerButton: "#292D32",
-        MobileMenuPopUp: "#F1F1F1",
+        MobileMenuPopUp: "rgba(241,241,241,0.73)",
         BordersColor: "#828282",
         BgColor: "#e44167"
     },

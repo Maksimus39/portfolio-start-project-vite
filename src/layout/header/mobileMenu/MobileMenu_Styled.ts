@@ -6,6 +6,7 @@ const StyledMobileMenu = styled.nav<{ isOpen: boolean }>`
 
     ${props => props.isOpen && css`
         display: block;
+        color: rgba(204, 31, 31, 0.13);
     `}
 `
 const MobileMenuPopUp = styled.div`
@@ -42,7 +43,6 @@ const ListItem = styled.li`
 `
 const Link = styled.a`
     display: flex;
-
     font-weight: 400;
     color: ${Theme.colors.accentBg};
     font-family: Epilogue, serif;
