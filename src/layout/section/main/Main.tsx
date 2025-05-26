@@ -2,7 +2,6 @@ import ImagePhoto from "./../../../assets/images/myPhoto.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Container} from "../../../components/container/Container.ts";
 import {S} from "./Main_Styles.ts"
-import Typewriter from 'typewriter-effect';
 import Tilt from 'react-parallax-tilt';
 
 
@@ -14,17 +13,7 @@ export const Main = () => {
                     <S.TextWrapper>
                         <S.HelloText>HELLO</S.HelloText>
                         <S.NameText>I'M MAXIM</S.NameText>
-                        <S.MainTitle>
-                            <S.MainTitle><p>'A`m frontend developer'</p></S.MainTitle>
-                            <Typewriter
-                                options={{
-                                    strings: ['A`m frontend developer'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                            />
-                        </S.MainTitle>
-
+                        <S.MainTitle>A`m frontend developer'</S.MainTitle>
                     </S.TextWrapper>
 
                     <Tilt className="parallax-effect-img"

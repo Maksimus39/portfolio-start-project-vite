@@ -7,7 +7,7 @@ const StyledContact = styled.section`
     height: 290px;
     background-color: ${Theme.colors.primaryBg};
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @media ${Theme.media.mobile} {
         min-height: 302px;

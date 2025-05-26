@@ -1,15 +1,13 @@
 import {S} from "./HeaderMenu_Styles.ts"
 import Menu from "../menu/Menu.tsx";
 
-type Props = {
-    menuItems: string[];
-}
 
-export const HeaderMenu = (props: Props) => {
+
+export const HeaderMenu = () => {
     return (
         <S.StyledHeaderMenu>
             <S.MenuList>
-                <Menu menuItems={props.menuItems}/>
+                <Menu/>
             </S.MenuList>
             <S.StyleButton>Let’s Talk</S.StyleButton>
         </S.StyledHeaderMenu>

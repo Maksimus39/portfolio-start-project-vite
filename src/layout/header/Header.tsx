@@ -6,7 +6,6 @@ import {S} from "./Header_Styles.ts"
 import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
 import {useEffect, useState} from "react";
 
-const items = ["Project", "About", "Digital Assets"]
 
 export const Header = () => {
 
@@ -27,8 +26,8 @@ export const Header = () => {
                     <Logo/>
 
                     {width < breakpoint
-                        ? <MobileMenu menuItems={items}/>
-                        : <HeaderMenu menuItems={items}/>
+                        ? <MobileMenu/>
+                        : <HeaderMenu/>
                     }
                 </FlexWrapper>
             </Container>

@@ -1,16 +1,42 @@
 import {S} from "../headerMenu/HeaderMenu_Styles.ts";
 
 
-type Props = {
-    menuItems: string[];
+type ItemsType = {
+    title: string
+    href: string
 }
-export const Menu = (props: Props) => {
+const items: ItemsType[] = [
+    {
+        title: "Technologies",
+        href: "technologies"
+    },
+    {
+        title: "Project",
+        href: "project"
+    },
+    {
+        title: "About",
+        href: "about"
+    },
+    {
+        title: "Digital Assets",
+        href: "digital Assets"
+    }
+]
+
+export const Menu = () => {
     return (
         <>
-            {props.menuItems.map((el, index) => {
+            {items.map((el, index) => {
                 return (
                     <S.ListItem key={index}>
-                        <S.Link href="">{el}</S.Link>
+                        <S.NavLink to={el.href}
+                                   smooth={true}
+                                   activeClass="active"
+                                   spy={true}
+                        >
+                            <span>{el.title}</span>
+                        </S.NavLink>
                     </S.ListItem>
                 )
             })}

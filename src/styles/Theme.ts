@@ -9,7 +9,8 @@ export const Theme = {
         textBlack: "#000000",
         burgerButton: "#292D32",
         MobileMenuPopUp: "#F1F1F1",
-        BordersColor:  "#828282"
+        BordersColor: "#828282",
+        BgColor: "#e44167"
     },
 
     media: {

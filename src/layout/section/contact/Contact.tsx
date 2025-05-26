@@ -5,12 +5,13 @@ import {S} from "./Contact_Styles.ts"
 
 export const Contact = () => {
     return (
-        <S.StyledContact>
+        <S.StyledContact id={"digital Assets"}>
             <S.ContactsPortfolio>
                 <S.OneColumn>
                     <Logo/>
                     <S.ContactMenu>
                         <ul>
+                            <li><a href="">Technologies</a></li>
                             <li><a href="">Projects</a></li>
                             <li><a href="">About</a></li>
                             <li><a href="">Digital Assets</a></li>

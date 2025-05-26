@@ -39,7 +39,7 @@ const work: WorkType[] = [
 
 export const Works = () => {
     return (
-        <S.StyledWorks>
+        <S.StyledWorks id={"project"}>
             <FlexWrapper direction={"column"} align={"start"} wrap={"wrap"} width={'100%'}>
                 <S.TextWrapper>
                     <S.SectionTitle>MY</S.SectionTitle>

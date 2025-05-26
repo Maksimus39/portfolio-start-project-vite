@@ -48,7 +48,7 @@ const skill: SkillType[] = [
 
 export const Skills = () => {
     return (
-        <S.StyledSkills>
+        <S.StyledSkills id={"technologies"}>
             <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                 {skill.map(el => {
                     return (

@@ -4,7 +4,7 @@ import {S} from "./AboutMe_Styles.ts"
 
 export const AboutMe = () => {
     return (
-        <S.StyledAboutMe>
+        <S.StyledAboutMe id={"about"}>
                 <S.LeftColumn>
                     <S.Text>About Me</S.Text>
                     <S.LeftDescription>I look at usual things with my unsual eyes.</S.LeftDescription>
