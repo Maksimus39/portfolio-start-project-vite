@@ -8,7 +8,8 @@ type SocialItemDataType = {
 }
 const socialItemData: SocialItemDataType[] = [
     {iconId: "tg", href: "https://t.me/Macsimus_Lipeck"},
-    {iconId: "vk", href: "https://vk.com/maxsimus_48"}
+    {iconId: "vk", href: "https://vk.com/maxsimus_48"},
+    {iconId:"whatsapp",href:"https://wa.me/89005918911"}
 ]
 
 
