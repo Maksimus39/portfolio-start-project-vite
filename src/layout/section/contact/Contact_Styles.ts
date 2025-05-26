@@ -7,7 +7,7 @@ const StyledContact = styled.section`
     height: 290px;
     background-color: ${Theme.colors.primaryBg};
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     @media ${Theme.media.mobile} {
         min-height: 302px;
@@ -46,6 +46,7 @@ const TwoColumn = styled.div`
 const ContactMenu = styled.nav`
     ul {
         display: flex;
+        flex-direction: row;
         gap: 32px;
         list-style: none;
         padding: 6px;
@@ -76,6 +77,7 @@ const ContactMenu = styled.nav`
         }
     }
 `
+
 const TextContact = styled.span`
     width: 400px;
     height: 24px;

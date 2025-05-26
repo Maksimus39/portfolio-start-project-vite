@@ -1,6 +1,7 @@
 import {Logo} from "../../../components/logo/Logo.tsx";
 import {Button} from "../../../components/Button.tsx";
 import {S} from "./Contact_Styles.ts"
+import Menu from "../../header/menu/Menu.tsx";
 
 
 export const Contact = () => {
@@ -10,12 +11,13 @@ export const Contact = () => {
                 <S.OneColumn>
                     <Logo/>
                     <S.ContactMenu>
-                        <ul>
-                            <li><a href="">Technologies</a></li>
-                            <li><a href="">Projects</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Digital Assets</a></li>
-                        </ul>
+                        {/*<ul>*/}
+                        {/*    <li><a href="">Technologies</a></li>*/}
+                        {/*    <li><a href="">Projects</a></li>*/}
+                        {/*    <li><a href="">About</a></li>*/}
+                        {/*    <li><a href="">Digital Assets</a></li>*/}
+                        {/*</ul>*/}
+                        <Menu/>
                     </S.ContactMenu>
                 </S.OneColumn>
                 <S.TwoColumn>

@@ -1,11 +1,11 @@
 import {S} from "../headerMenu/HeaderMenu_Styles.ts";
 
 
-type ItemsType = {
+export type ItemsType = {
     title: string
     href: string
 }
-const items: ItemsType[] = [
+export const items: ItemsType[] = [
     {
         title: "Technologies",
         href: "technologies"

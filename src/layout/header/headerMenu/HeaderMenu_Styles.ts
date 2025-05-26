@@ -11,7 +11,9 @@ const StyledHeaderMenu = styled.nav`
         justify-content: flex-end;
     }
 `
-const ListItem = styled.li``
+const ListItem = styled.li`
+    list-style: none
+`
 const NavLink = styled(Link)`
     font-weight: 400;
     font-size: 16px;
@@ -19,7 +21,7 @@ const NavLink = styled(Link)`
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-
+    
     /* Стили для активной ссылки */
 
     &:active {
