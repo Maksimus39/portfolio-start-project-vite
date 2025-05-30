@@ -11,9 +11,6 @@ importers:
       '@tsparticles/engine':
         specifier: ^3.8.1
         version: 3.8.1
-      '@types/react-scroll':
-        specifier: ^1.8.10
-        version: 1.8.10
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -54,6 +51,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.1
         version: 18.3.5(@types/react@18.3.16)
+      '@types/react-scroll':
+        specifier: ^1.8.10
+        version: 1.8.10
       '@vitejs/plugin-react':
         specifier: ^4.3.4
         version: 4.3.4(vite@6.0.3)

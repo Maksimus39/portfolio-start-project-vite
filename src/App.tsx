@@ -6,6 +6,7 @@ import {Works} from "./layout/section/works/Works.tsx";
 import {AboutMe} from "./layout/section/aboutMe/AboutMe.tsx";
 import {Contact} from "./layout/section/contact/Contact.tsx";
 import {Footer} from "./layout/section/footer/Footer.tsx";
+import {GoToBtn} from "./components/goTobBtn/GoToBtn.tsx";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <AboutMe/>
             <Contact/>
             <Footer/>
+            <GoToBtn/>
         </div>
     )
 }
