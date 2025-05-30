@@ -35,7 +35,7 @@ export const Menu = () => {
                                    activeClass="active"
                                    spy={true}
                         >
-                            <span>{el.title}</span>
+                            <S.Span>{el.title}</S.Span>
                         </S.NavLink>
                     </S.ListItem>
                 )

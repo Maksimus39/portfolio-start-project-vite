@@ -12,7 +12,9 @@ const StyledHeaderMenu = styled.nav`
     }
 `
 const ListItem = styled.li`
-    list-style: none
+    list-style: none;
+    display: flex;
+    flex-direction: row;
 `
 const NavLink = styled(Link)`
     font-weight: 400;
@@ -21,7 +23,7 @@ const NavLink = styled(Link)`
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    
+
     /* Стили для активной ссылки */
 
     &:active {
@@ -72,10 +74,16 @@ const StyleButton = styled.button`
     }
 `
 
+const Span = styled.span`
+    display: flex;
+    flex-direction: row;
+`
+
 export const S = {
     StyledHeaderMenu,
     ListItem,
     NavLink,
     MenuList,
     StyleButton,
+    Span
 }
