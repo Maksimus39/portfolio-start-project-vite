@@ -1,7 +1,7 @@
 import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
 import {Skill} from "./skill/Skill.tsx";
 import {S} from "./Skills_Style.ts"
-
+import {Fade} from "react-awesome-reveal";
 
 type SkillType = {
     index: number
@@ -50,13 +50,17 @@ export const Skills = () => {
     return (
         <S.StyledSkills id={"technologies"}>
             <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                {skill.map(el => {
-                    return (
-                        <Skill skillTitle={el.skillTitle}
-                               skillText={el.skillText}
-                               index={el.index}/>
-                    )
-                })}
+
+                <Fade cascade={true} damping={0.2}>
+                    {skill.map(el => {
+                        return (
+                            <Skill skillTitle={el.skillTitle}
+                                   skillText={el.skillText}
+                                   index={el.index}/>
+                        )
+                    })}
+                </Fade>
+
             </FlexWrapper>
         </S.StyledSkills>
     );

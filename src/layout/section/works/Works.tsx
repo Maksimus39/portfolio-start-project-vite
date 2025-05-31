@@ -45,17 +45,17 @@ export const Works = () => {
                     <S.SectionTitle>MY</S.SectionTitle>
                     <S.SectionTitle>PROJECTS</S.SectionTitle>
                 </S.TextWrapper>
-                {work.map((el, index) => {
-                    return (
-                        <Work
-                            key={index}
-                            image={el.image}
-                            title={el.title}
-                            titleOne={el.titleOne}
-                            titleText={el.titleText}
-                            description={el.description}/>
-                    )
-                })}
+                    {work.map((el, index) => {
+                        return (
+                            <Work
+                                key={index}
+                                image={el.image}
+                                title={el.title}
+                                titleOne={el.titleOne}
+                                titleText={el.titleText}
+                                description={el.description}/>
+                        )
+                    })}
             </FlexWrapper>
         </S.StyledWorks>
     );

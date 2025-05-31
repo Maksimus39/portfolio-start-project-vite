@@ -23,13 +23,12 @@ const NavLink = styled(Link)`
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-
     /* Стили для активной ссылки */
 
     &:active {
         font-weight: 700;
         color: ${Theme.colors.BgColor};
-
+        
         /* Можно добавить подчеркивание или другой индикатор */
 
         &::after {

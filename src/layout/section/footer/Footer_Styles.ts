@@ -24,7 +24,18 @@ const SocialItem = styled.li`
     display: flex;
     list-style: none;
 `;
-const SocialLinc = styled.a``
+const SocialLinc = styled.a`
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.5); /* Увеличиваем на 10% */
+    }
+
+    &:active {
+        transform: scale(0.98); /* Небольшое уменьшение при клике */
+    }
+`
 const StyledCopyRight = styled.small`
     font-family: Roboto, serif;
     font-weight: 400;
