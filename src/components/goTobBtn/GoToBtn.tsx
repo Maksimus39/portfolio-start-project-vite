@@ -33,5 +33,5 @@ const StyledGoToBtn = styled.button`
     padding: 8px;
     position: fixed;
     right: 30px;
-    bottom: 30px;
+    bottom: 50px;
 `
