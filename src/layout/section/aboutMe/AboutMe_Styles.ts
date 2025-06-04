@@ -11,7 +11,6 @@ const StyledAboutMe = styled.section`
     max-width: 1440px;
     min-height: 540px;
     margin: 0 auto;
-
     flex-wrap: wrap;
 `
 const LeftColumn = styled.div`
